@@ -1,0 +1,312 @@
+@media screen and (max-width:  1300px) {
+    :root {
+        --title-font-size: 1.8em;
+        --techno-font-size: 1.3em;
+        --presentation-height: 55vh;
+    }
+
+    .presentation {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width:  1210px) {
+    :root {
+        --title-font-size: 1.6em;
+        --techno-font-size: 1em;
+        --presentation-height: 50vh;
+        --section-height: 60vh;
+    }
+}
+
+@media screen and (max-width:  1060px) {
+    :root {
+        --title-font-size: 1.6em;
+        --techno-font-size: 1.1em;
+        --presentation-height: 45vh;
+    }
+
+    .large {
+        font-size: 45px;
+    }
+
+    .presentation-description {
+        font-size: 25px
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width:  980px) {
+    :root {
+        --title-font-size: 1.8em;
+        --techno-font-size: 1.3em;
+        --page-margin: 4em;
+        --presentation-height: 45vh;
+        --section-height: 60vh;
+    }
+
+    .nav-link {
+        font-size: 15px;
+    }
+
+    .large {
+        font-size: 35px;
+        margin: 40px 0;
+    }
+
+    .presentation-text {
+        width: 70%;
+    }
+
+    .presentation-description {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .presentation-image {
+        /* width: 25%; */
+    }
+
+    .col-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width:  820px) {
+    :root {
+        --title-font-size: 1.5em;
+        --techno-font-size: 1em;
+        --page-margin: 2em;
+        --presentation-height: 40vh;
+        --section-height: 40vh;
+        --section-title-fs: 2em;
+        --footer-fs: 1em;
+        --image-margin: 4em;
+    }
+
+    .large {
+        font-size: 30px;
+        margin: 40px 0;
+    }
+
+    .presentation-description {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:  740px) {
+    :root {
+        --page-margin: 1em;
+        --presentation-height: 40vh;
+        --title-font-size: 1.7em;
+        --techno-font-size: 0.9em;
+        --section-title-fs: 1.7em;
+        --footer-fs: 0.9em;
+        --form-padding: 0;
+    }
+}
+
+@media screen and (max-width:  700px) {
+    :root {
+        --section-title-fs: 1.7em;
+        --footer-fs: 0.8em;
+        --title-font-size: 1.5em;
+        --techno-font-size: 0.9em;
+
+        --label-fs: medium;
+        --input-height: 35px;
+        --btn-height: 40px;
+    }
+
+    .nav-link {
+        font-size: 13px;
+    }
+
+    .dropdown-btn {
+        display: none;
+    }
+
+    .navbar ul {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        justify-content: space-between;
+    }
+
+}
+
+@media screen and (max-width:  580px) {
+    :root {
+        --section-title-fs: 1.6em;
+        --footer-fs: 0.8em;
+        --image-margin: 2em;
+    }
+
+    .presentation-image {
+        /*width: 30%;*/
+    }
+
+
+    .dropdown-btn {
+        display: block;
+    }
+
+    .navbar ul {
+        position: absolute;
+        flex-direction: column;
+        background: var(--secondary-color);
+        border: 1px solid var(--primary-color);
+        width: 30%;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        z-index: 5;
+        top: 80px;
+        right: var(--page-margin);
+        box-shadow: 1px 1px 1px black;
+        border-radius: 2px;
+        transition: all;
+        transition-duration: .5s;
+        display: none;
+    }
+
+    .nav-link {
+        width: 100%;
+        display: block;
+        height: 20px;
+    }
+
+    .navbar ul li {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:  500px) {
+    :root {
+        --page-margin: 1em;
+        --presentation-height: 35vh;
+        --title-font-size: 1em;
+        --techno-font-size: 0.8em;
+        --section-title-fs: 1.5em;
+        --footer-fs: 0.8em;
+
+        --label-fs: small;
+        --form-padding: 20px 0;
+        --input-height: 30px;
+        --btn-height: 35px;
+    }
+
+    .mb-3 {
+        margin-bottom: 1em;
+    }
+
+    .large {
+        font-size: 25x;
+        margin: 20px 0;
+    }
+
+    .presentation-description {
+        font-size: 15px;
+    }
+
+    .grid {
+        gap: 10px;
+    }
+
+    .projects .project-content {
+        padding: 1em;
+    }
+
+    .projects .project-content p {
+        font-size: 0.8em;
+    }
+
+    .skills .skill-content p {
+        font-size: 0.8em;
+    }
+    
+    .projects .project-content .project-btn {
+        font-size: 0.8em;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width:  400px) {
+    :root {
+        --page-margin: 1em;
+        --presentation-height: 25vh;
+        --title-font-size: 1em;
+        --techno-font-size: 0.8em;
+        --section-title-fs: 1.3em;
+        --footer-fs: 0.8em;
+    }
+
+    .brand .logo {
+        width: 70px;
+    }
+
+    .navbar {
+        height: 60px;
+    }
+
+    .dropdown-btn {
+        font-size: 10px;
+        height: 30px;
+    }
+
+    .navbar ul {
+        top: 60px;
+    }
+
+    .large {
+        font-size: 25px;
+        margin: 15px 0;
+    }
+
+    .presentation-description {
+        font-size: 15px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .projects .project-content {
+        padding: 1em;
+    }
+
+    .projects .project-content p {
+        font-size: 0.8em;
+    }
+    
+    .projects .project-content .project-btn {
+        font-size: 0.8em;
+        height: 30px;
+    }
+
+    .mb-3 {
+        margin-bottom: 1em;
+    }
+}
+
+@media screen and (max-width:  360px) {
+    :root {
+        --section-title-fs: 1.2em;
+        --footer-fs: 0.7em;
+        --presentation-height: 20vh;
+    }
+
+    .large {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+
+    .presentation-description {
+        font-size: 10px;
+    }
+}

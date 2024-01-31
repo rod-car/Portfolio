@@ -1,0 +1,392 @@
+:root {
+    --primary-color: #FF9F32;
+    --secondary-color: #292828;
+    --third-color: #545353;
+    --text-color: #FFF7EF;
+    --text-hover: #ffdbb9;
+    --page-margin: 4em;
+    --image-margin: 5em;
+    --title-font-size: 2em;
+    --techno-font-size: 1.5em;
+    --presentation-height: 70vh;
+    --section-height: 100vh;
+    --section-title-fs: 30px;
+    --footer-fs: 1em;
+}
+
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: 450;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lora';
+    src: url('../fonts/Lora-VariableFont_wght.ttf') format('truetype');
+    font-weight: 450;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+}
+
+body, html {
+    padding: 0;
+    margin: 0;
+    background: var(--third-color);
+    background: linear-gradient(45deg, var(--third-color),rgb(49, 49, 49), var(--secondary-color));
+    background-repeat: no-repeat;
+}
+
+.header {
+    height: 80px;
+}
+
+.navbar {
+    background: var(--secondary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--page-margin) 0 var(--page-margin);
+    box-shadow: 1px 1px 1px black;
+    height: 100%;
+}
+
+.navbar ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+}
+
+.navbar ul li {
+    list-style-type: none;
+    margin-left: 1.5em;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: large;
+    padding: 10px 0;
+    font-weight: bold;
+    transition-duration: .2s;
+}
+
+.nav-link::before {
+    content: '';
+    background: transparent;
+    width: 20%;
+    display: block;
+    height: 3px;
+    margin-bottom: 10px;
+}
+
+.nav-link::after {
+    content: '';
+    background: var(--primary-color);
+    width: 0%;
+    display: block;
+    height: 3px;
+    margin-top: 10px;
+    border-radius: 2px;
+    transition-duration: .2s;
+}
+
+.nav-link:hover.nav-link::after {
+    width: 100%;
+    transition-duration: .2s;
+}
+
+.nav-link:hover {
+    color: var(--text-hover);
+    transition-duration: .2s;
+}
+
+.navbar ul .active {
+    color: var(--text-hover);
+}
+
+.navbar ul .active.nav-link::after {
+    width: 100%;
+}
+
+.brand {
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.brand .logo {
+    width: 100px;
+}
+
+.section-title {
+    font-size: var(--section-title-fs);
+    margin-top: 0;
+}
+
+.presentation {
+    min-height: var(--presentation-height);
+    padding: var(--page-margin);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.presentation-text {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.presentation-image {
+    position: absolute;
+    right: var(--image-margin);
+    bottom: 0;
+    width: auto;
+    height: 90%;
+}
+
+.projects {
+    background: var(--secondary-color);
+    padding: var(--page-margin);
+    min-height: var(--section-height);
+}
+
+.projects .project {
+    background: var(--third-color);
+    border: 1px solid transparent;
+    border-bottom: 1px solid var(--primary-color);
+    box-shadow: 1px 1px 1px black;
+    transition-duration: .2s;
+}
+
+.projects .project:hover {
+    border: 1px solid var(--primary-color);
+    transition-duration: .2s;
+    background: #3d3d3d;
+}
+
+.projects .project-img img {
+    width: 100%;
+    transition-duration: .2s;
+}
+
+.projects .project-content {
+    padding: 0 1.5em 1.5em 1.5em;
+}
+
+.project-techno {
+    font-size: var(--techno-font-size);
+}
+
+.projects .project-content .project-description {
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.projects .project-content .project-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    border-radius: 2px;
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    font-size: 16px;
+    transition-duration: .2s;
+    text-decoration: none;
+}
+
+.projects .project-content .project-title {
+    font-size: var(--title-font-size);
+}
+
+
+.projects .project-content .project-btn:hover {
+    background: var(--primary-color);
+    transition-duration: .2s;
+}
+
+/* Skills */
+
+.skills {
+    padding: var(--page-margin);
+    min-height: var(--section-height);
+}
+
+.skills .skill {
+    background: var(--third-color);
+    border: 1px solid transparent;
+    border-bottom: 1px solid var(--primary-color);
+    box-shadow: 1px 1px 1px black;
+    transition-duration: .2s;
+}
+
+.skills .skill:hover {
+    background: var(--primary-color);
+    transition-duration: .2s;
+}
+
+.skills .skill:hover .skill-title {
+    text-shadow: 1px 1px 1px var(--secondary-color);
+    transition-duration: .2s;
+}
+
+.skills .skill:hover .skill-object, .skills .skill:hover .skill-description {
+    color: var(--secondary-color);
+    transition-duration: .2s;
+}
+
+.skills .skill-content {
+    padding: 0 1.5em 1.5em 1.5em;
+}
+
+.skills .skill-content .skill-description {
+    text-align: justify;
+    line-height: 1.5;
+    transition-duration: .2s;
+}
+
+.skills .skill-content .skill-object {
+    color: var(--primary-color);
+    font-size: var(--techno-font-size);
+    transition-duration: .2s;
+}
+
+.skills .skill-content .skill-title {
+    font-size: var(--title-font-size);
+    transition-duration: .2s;
+}
+
+/* End skills */
+
+/* Social-media */
+
+.social-medias {
+    background: var(--secondary-color);
+    padding: var(--page-margin);
+    min-height: calc(var(--section-height) - 30vh);
+}
+
+.social-medias .social-media {
+    background: var(--secondary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px black;
+    transition-duration: .2s;
+    text-decoration: none;
+}
+
+.social-medias .social-media:hover {
+    background: var(--primary-color);
+    transition-duration: .2s;
+}
+
+.social-medias .social-media:hover .social-media-title {
+    text-shadow: 1px 1px 1px var(--secondary-color);
+    transition-duration: .2s;
+}
+
+.social-medias .social-media:hover .social-media-object {
+    color: var(--secondary-color);
+    transition-duration: .2s;
+}
+
+.social-medias .social-media-content {
+    padding: 0 1.5em 1.5em 1.5em;
+}
+
+.social-medias .social-media-content .social-media-object {
+    color: var(--primary-color);
+    transition-duration: .2s;
+    font-weight: 300;
+}
+
+.social-medias .social-media-content .social-media-title {
+    font-size: var(--techno-font-size);
+    transition-duration: .2s;
+}
+
+/* End social-media */
+
+.footer {
+    background-color: var(--secondary-color);
+    min-height: 60px;
+    border-top: 1px solid var(--primary-color);
+    box-shadow: -1px -1px -1px black;
+}
+
+.footer-head {
+    padding: 5px var(--page-margin);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-foot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #202020;
+}
+
+.footer p {
+    /* margin: 0; */
+    font-size: var(--footer-fs);
+}
+
+.details {
+    padding: var(--page-margin);
+    min-height: var(--section-height);
+}
+
+.details .project-img img {
+    width: 100%;
+    border: 2px solid var(--primary-color);
+}
+
+.dropdown-btn {
+    height: 40px;
+    background: var(--secondary-color);
+    padding: 0 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 3px;
+    transition-duration: .2s;
+    display: none;
+}
+
+.dropdown-btn:hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    transition-duration: .2s;
+}
+
+.hover {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    transition-duration: .2s;
+}
+
+.hover:hover {
+    background: var(--secondary-color);
+    transition-duration: .2s;
+    color: var(--text-color);
+}
+
+.subtitle {
+    font-size: calc(var(--techno-font-size));
+}
+
+.content {
+    font-size: calc(var(--techno-font-size) - 0.5em);
+}

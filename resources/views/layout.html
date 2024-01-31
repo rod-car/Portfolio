@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/utility.css">
+    {% block css %}{% endblock %}
+    <link rel="stylesheet" href="/css/responsive.css">
+    <title>BOUDI Gislain Carino Rodrigue</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="{{ url_for('home') }}">
+                <h1 class="brand"><img class="logo" src="/images/logo.png" alt=""></h1>
+            </a>
+            <button id="dropdown-button" class="dropdown-btn" type="button">Menu</button>
+            <ul class="nav-ul">
+                {% if active != 'contact' and active != 'biography' and active != 'details' and active != 'error' %}
+                    <li>
+                        <a id="projects" class="nav-link" href="">Realisations</a>
+                    </li>
+                    <li><a id="skills" class="nav-link" href="">Competences</a></li>
+                {% else %}
+                    <li><a class="nav-link" href="{{ url_for('home') }}">Accueil</a></li>
+                {% endif %}
+                <li><a class="nav-link {{ active == 'biography' ? 'active' : '' }}" href="{{ url_for('biography') }}">Biographie</a></li>
+                <li><a class="nav-link {{ active == 'contact' ? 'active' : '' }}" href="{{ url_for('contact') }}">Me contacter</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main">
+        {% block content %}{% endblock %}
+    </div>
+    <footer class="footer">
+        <div class="footer-head">
+            <p>Dernière mise à jour : <span class="primary-color">le 31/01/2024</span></p>
+            <a class="nav-link" href="{{ url_for('contact') }}">Me contacter</a>
+        </div>
+        <div class="footer-foot">
+            <p>Design et integration par Gislain Carino Rodrigue BOUDI</p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

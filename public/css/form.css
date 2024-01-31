@@ -1,0 +1,56 @@
+:root {
+    --label-fs: large;
+    --form-padding: 20px 0;
+    --input-height: 40px;
+    --btn-height: 45px;
+    --label-mb: 10px;
+    --section-height: 100vh;
+}
+
+.form {
+    padding: var(--form-padding);
+}
+
+.label {
+    display: block;
+    margin-bottom: var(--label-mb);
+    width: 100%;
+    font-size: var(--label-fs);
+    font-weight: bold;
+}
+
+.input {
+    width: 100%;
+    height: var(--input-height);
+    border: 1px solid var(--primary-color);
+    border-radius: 3px;
+    color: var(--secondary-color);
+}
+
+.textarea {
+    width: 100%;
+    border: 1px solid var(--primary-color);
+    border-radius: 3px;
+    color: var(--secondary-color);
+}
+
+.form-btn {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    width: 25%;
+    height: var(--btn-height);
+    font-size: var(--label-fs);
+    border-radius: 3px;
+    font-weight: bold;
+    transition-duration: .2s;
+}
+
+.form-btn:hover {
+    background: var(--primary-color);
+    color: var(--text-color);
+    transition-duration: .2s;
+}
+
+.details {
+    min-height: var(--section-height);
+}

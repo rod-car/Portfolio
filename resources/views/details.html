@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    
+<section class="details">
+    <h2 class="section-title primary-color">{{ project.title }}</h2>
+    <hr class="primary-border mb-3">
+    <div class="col-2 mb-2">
+        <div class="project-img">
+            <img src="/images/projects/{{ project.image }}" alt="">
+        </div>
+        <div class="">
+            <h2 class="primary-color subtitle bold mt-0">Technologies</h2>
+            <p class="content" style="line-height: 1.5;">
+                {{ project.technology.detailed }}
+            </p>
+
+            <h2 class="primary-color subtitle bold">Avantages</h2>
+            <ul class="content" style="list-style-type: circle;">
+                {% for advantage, description in project.advantages %}
+                    <li class="mb-1 primary-color"><span class="text-zhite">{{ advantage }}: {{ description }}</span></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <h2 class="primary-color subtitle bold mt-0">Description</h2>
+    <p class="content" style="line-height: 1.5; text-align: justify;">
+        {{ project.fullDescription }}
+    </p>
+
+    <h2 class="primary-color subtitle bold">Disponible <a class="primary-color italic" target="_blank" href="https://{{ project.demo }}">ici</a></h2>
+</section>
+
+{% endblock %}

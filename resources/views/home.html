@@ -1,0 +1,123 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<section class="presentation">
+    <div class="presentation-text">
+        <h2 class="primary-color presentation-description">Bonjour, je m'appelle</h2>
+        <h2 class="large">Gislain Carino Rodrigue <br>BOUDI</h2>
+        <h2 style="font-weight: lighter;" class="presentation-description">Developpeur PHP Full-stack</h2>
+    </div>
+    <img class="presentation-image" src="/images/my-photo.png" alt="">
+</section>
+
+<section id="projects-section" class="projects">
+    <h2 class="section-title primary-color">Mes realisations</h2>
+    <hr class="primary-border mb-3" />
+
+    <div class="grid">
+        {% for project in projects %}
+            <div class="project mb-3">
+                <div class="project-img">
+                    <img src="/images/projects/{{ project.image }}" alt="">
+                </div>
+                <div class="project-content">
+                    <h1 class="project-title">{{ project.title }}</h1>
+                    <h2 class="primary-color project-techno">{{ project.technology.simple }}</h2>
+                    <p class="mb-3 project-description">
+                        {{ project.description }}
+                    </p>
+                    <a href="{{ url_for('details', { 'id': project.id }) }}" class="project-btn">Voir plus de details</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section id="skills-section" class="skills">
+    <h2 class="section-title primary-color">Mes competences</h2>
+    <hr class="primary-border mb-3">
+
+    <div class="grid">
+        <div class="skill mb-3">
+            <div class="skill-content">
+                <h1 class="skill-title">React ou VueJS</h1>
+                <h2 class="skill-object">Front-end</h2>
+                <p class="skill-description">
+                    Je fais une intégration d'une API à travers un Framework Front-end depuis deux ans. De base, j'utilise React et VueJS 3. SI vous avez besoin d'un intégrateur de votre API, je suis à vous.
+                </p>
+            </div>
+        </div>
+
+        <div class="skill mb-3">
+            <div class="skill-content">
+                <h1 class="skill-title">Laravel ou Symfony</h1>
+                <h2 class="skill-object">Back-end</h2>
+                <p class="skill-description">
+                    Je suis développeur PHP depuis plus de 3 ans, maitrisant le Framework Laravel (v9) et Symfony (v6). Si vous avez besoin d'une application WEB dynamique, ou une API, n'hésitez pas à me contacter.
+                </p>
+            </div>
+        </div>
+
+        <div class="skill mb-3">
+            <div class="skill-content">
+                <h1 class="skill-title">Django</h1>
+                <h2 class="skill-object">Back-end</h2>
+                <p class="skill-description">
+                    Pour mon dernier projet, je me suis oriente plus vers l'IA. J'ai utilisé le Framework Django (v5) afin d'utiliser les librairies de l'IA en Python.
+                </p>
+            </div>
+        </div>
+
+        <div class="skill mb-3">
+            <div class="skill-content">
+                <h1 class="skill-title">Bootstrab</h1>
+                <h2 class="skill-object">Framework CSS</h2>
+                <p class="skill-description">
+                    J'utilise Bootstrap (v5) pour la plupart de mes réalisations que ce soit personnel ou professionnel, pour le design CSS, en ajoutant quelque personnalisation du style.
+                </p>
+            </div>
+        </div>
+
+        <div class="skill mb-3">
+            <div class="skill-content">
+                <h1 class="skill-title">Adobe XD</h1>
+                <h2 class="skill-object">Design</h2>
+                <p class="skill-description">
+                    Souvent, je fais des maquettes afin de faciliter le développement. J'utilise Adobe XD pour réaliser ces maquettes comme pour le cas de ce Portfolio.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="social-medias">
+    <h2 class="section-title primary-color">Me trouver</h2>
+    <hr class="primary-border mb-3">
+
+    <div class="grid">
+        <a target="_blank" href="https://github.com/rod-car" class="social-media mb-3">
+            <div class="social-media-content">
+                <h1 class="social-media-title">Github</h1>
+                <h2 class="social-media-object">github.com/rod-car</h2>
+            </div>
+        </a>
+
+        <a target="_blank" href="https://linkedin.com/rod-car" class="social-media mb-3">
+            <div class="social-media-content">
+                <h1 class="social-media-title">LinkedIn</h1>
+                <h2 class="social-media-object">linkedin.com/rod-car</h2>
+            </div>
+        </a>
+
+        <a href="mailto: ghislaincarino@gmail.com" class="social-media mb-3">
+            <div class="social-media-content">
+                <h1 class="social-media-title">Email</h1>
+                <h2 class="social-media-object">ghislaincarino@gmail.com</h2>
+            </div>
+        </a>
+    </div>
+</section>
+
+{% endblock %}

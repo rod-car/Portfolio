@@ -1,0 +1,29 @@
+{
+    "name": "rod-car/portfolio",
+    "description": "Portfolio",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "RodCar\\Portfolio\\": "src/"
+        },
+        "classmap": [
+            "src/"
+        ]
+    },
+    "authors": [
+        {
+            "name": "rod-car",
+            "email": "ghislaincarino@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.6",
+        "slim/twig-view": "^3.3",
+        "phpmailer/phpmailer": "^6.9",
+        "davidepastore/slim-validation": "^3.0"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^6.4"
+    }
+}
